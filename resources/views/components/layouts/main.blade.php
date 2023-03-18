@@ -7,11 +7,12 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css" integrity="sha512-paVHVRRhdoOu1nOXKnqDC1Vka0nh7FAmU3nsM4n2FKxOQTeF6crMdMfkVvEsuaOXZ6oEAVL5+wLbQcule/Xdag==" crossorigin="anonymous" />    <style>
+    <style>
         body {
             font-family: 'Nunito', sans-serif;
         }
     </style>
+    <link rel="stylesheet" href="{{asset('build/assets/app-70f11624.css')}}" />
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col">
 <x-layouts.header />
@@ -41,5 +42,6 @@
     </div>
 </main>
 <x-layouts.footer />
+<script src="{{asset('build/assets/app-e40cc302.js')}}" type="text/javascript"></script>
 </body>
 </html>

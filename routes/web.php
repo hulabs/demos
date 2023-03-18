@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StartpageController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,8 @@ use App\Http\Controllers\StartpageController;
 */
 
 Route::get('/', [StartpageController::class, 'index']);
+
+Route::resource('blog', PostController::class);
 
 Route::get('/welcome', function () {
     return view('welcome');

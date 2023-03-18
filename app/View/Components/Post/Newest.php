@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Post;
 
+use App\Models\Post;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,13 +22,7 @@ class Newest extends Component
      */
     public function render(): View|Closure|string
     {
-        $posts = collect([
-            ["title" => "Beitrag 1", "id" => 1],
-            ["title" => "Beitrag 2", "id" => 2],
-            ["title" => "Beitrag 3", "id" => 3],
-            ["title" => "Beitrag 4", "id" => 4],
-            ["title" => "Beitrag 5", "id" => 5],
-        ]);
+        $posts = Post::latest()->active()->limit(5)->get();
         return view('components.post.newest', compact('posts'));
     }
 }

@@ -19,7 +19,7 @@ class PostFactory extends Factory
         return [
            'user_id' => $this->faker->numberBetween(1, 10),
            'title' => $this->faker->sentence,
-           'body' => $this->faker->text(),
+           'body' => $this->faker->text(500),
            'created_at' => $this->faker->dateTimeBetween('2023-01-01', '2023-03-17'),
            'deleted_at' => $this->faker->randomElement([
                null,

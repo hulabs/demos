@@ -6,8 +6,8 @@
                 <img src="https://picsum.photos/800/350?random={{rand(0,100)}}" alt="Random image" class="rounded-t">
                 <div class="p-5">
                     <div class="font-bold text-xs text-blue-700">{{$post->created_at}}</div>
-                    <div class="text-3xl text-blue-900">{{$post->title}}</div>
-                    <div class="text-lg text-gray-700">
+                    <div class="text-3xl text-blue-900"><a class="mb-2 font-bold line-clamp-1" href="/blog/{{ $post->id }}">{{ $post->title }}</a></div>
+                    <div class="text-lg text-gray-700 line-clamp-3">
                         {{$post->body}}
                     </div>
                 </div>

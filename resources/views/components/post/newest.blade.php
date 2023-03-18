@@ -5,7 +5,7 @@
     <div class="mt-5 text-gray-700 text-sm">
         <ul>
             @foreach($posts as $post)
-                <li><a href="/post/{{ $post['id'] }}">{{ $post['title'] }}</a></li>
+                <li><a class="mb-2 font-bold line-clamp-1" href="/blog/{{ $post->id }}">{{ $post->title }}</a></li>
             @endforeach
         </ul>
     </div>
